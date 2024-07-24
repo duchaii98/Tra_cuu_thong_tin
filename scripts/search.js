@@ -81,9 +81,7 @@ async function getDataNewsByKeywords(keywords, page) {
       );
     }
     // bắt lỗi khi chạy từ tập tin không thông qua server
-    if (data.code === "1") {
-      throw new Error(data.message);
-    }
+ 
     // hiển thị các nút chuyển trang nếu dữ lieu trả về thành công
     navPageNum.style.display = "block";
     displayNewList(data);
